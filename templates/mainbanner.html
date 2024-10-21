@@ -1,0 +1,18 @@
+<div class="mainbanner">
+    <div class="navigation">
+        {% for main in main_info %}
+        <h5>Привет, меня зовут</h5>
+        <h1>{{ main.fullname }}</h1>
+        <p>{{ main.profession }}</p>
+        <div class="nav_buttons">
+            <a href="{{ main.resume_file.url }}" class="btn">Резюме</a>
+            <a href="#contacts" class="btn">Контакты</a>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="banner_image">
+        {% for main in main_info %}
+        <img class="main_image" src="{{ main.image.url }}" alt="Main Banner Image">
+        {% endfor %}
+    </div>
+</div>
